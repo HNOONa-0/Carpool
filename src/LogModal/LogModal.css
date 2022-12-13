@@ -1,0 +1,12 @@
+.modsz{
+    max-width: 400px;
+    width: 90%;
+    max-height: 90%;
+}
+.modsy{
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+}

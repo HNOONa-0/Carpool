@@ -1,0 +1,43 @@
+.label1{
+    color: rgb(126, 133, 155);
+    font-size: 1rem;
+    max-width: 100%;
+    pointer-events: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all 0.2s ease 0s;
+}
+.input1{
+    background-color : #BCD9F7;
+    /* background: transparent; */
+    /* color: rgb(64, 69, 83); */
+    display: block;
+    width: 100%;
+    border-top: initial;
+    border-right: initial;
+    border-left: initial;
+    user-select: text;
+    transform: none;
+    cursor: auto;
+    border-image: initial;
+    border-bottom: 1px solid rgb(226, 229, 241);
+}
+.signin-button-div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid rgb(226, 229, 241);
+    vertical-align: baseline;
+}
+.signin-button{
+    flex: 1 1 0%;
+    text-align: center;
+    font-size: 1.25rem;
+    color: rgb(56, 102, 223);
+    font-weight: 600;
+    padding: 18px 0px;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+}

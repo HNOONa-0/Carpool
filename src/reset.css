@@ -1,0 +1,189 @@
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: theme('borderColor.DEFAULT', currentColor);
+}
+
+.google-map * {
+    border-style: none;
+}
+
+button:focus {
+  /* outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color; */
+}
+*{
+  box-sizing: border-box;
+}
+
+.p16{
+  padding: 16px;
+}
+.p32{
+  padding: 32px;
+}
+.p64{
+  padding: 64px;
+}
+.pt64{
+  padding-top: 64px;
+}
+.pl32{
+  padding-left: 32px;
+}
+.pr32{
+  padding-right: 32px;
+}
+.pt8{
+  padding-top: 8px;
+}
+.pt16{
+  padding-top: 16px;
+}
+.pt32{
+  padding-top: 32px;
+}
+.pb8{
+  padding-bottom: 8px;
+}
+.pb16{
+  padding-bottom: 16px;
+}
+.pb32{
+  padding-bottom: 32px;
+}
+.mt16{
+  margin-top: 16px;
+}
+.mb4{
+  margin-bottom: 4px;
+}
+.mb16{
+  margin-bottom: 16px;
+}
+.mb25{
+  margin-bottom: 25px;
+}
+.mb32{
+  margin-bottom: 32px;
+}
+.mr2{
+  margin-right: 2px;
+}
+.mr4{
+  margin-right: 4px;
+}
+.fz16{
+  font-size: 16px;
+}
+.fz18{
+  font-size: 18px;
+}
+.fz24{
+  font-size: 24px;
+}
+.bold{
+  font-weight: bold;
+}
+.bolder{
+  font-weight: bolder;
+}
+.border-curve{
+  border-radius: 8px;
+}
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.space-around{
+  justify-content:space-around;
+}
+.justify-center{
+  justify-content: center;
+}
+.text-color-blue{
+  color: #469EF7;
+}
+.text-color-dark-blue{
+  color: #268EF7;
+}
+.text-dash{
+  text-decoration: underline;
+}
+.align-center{
+  align-items: center;
+}
+.w100{
+  width: 100%;
+}
+.h100{
+  height: 100%;
+}
+.pos-rel{
+  position: relative;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.midxy{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
