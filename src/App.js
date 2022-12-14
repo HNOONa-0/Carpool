@@ -12,10 +12,6 @@ function App() {
         isMod={isMod}
         setIsMod={setIsMod}
       />
-      {/* <SignIn
-        isMod={isMod}
-        setIsMod={setIsMod}
-      /> */}
       <LogModal
         isMod={isMod}
         setIsMod={setIsMod}

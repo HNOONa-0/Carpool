@@ -38,7 +38,7 @@
   background-color: inherit;
   cursor: pointer;
   outline: none;
-  font-weight: 800;
+  font-weight: 600;
   transition: all 0.5s;
   display: flex;
   align-items: center;
@@ -47,4 +47,10 @@
 .sign1:hover{
   /* color:#595A5B; */
   color:#76B7F9;
+}
+.logo{
+  font-weight: 800;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
 }

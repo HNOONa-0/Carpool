@@ -1,4 +1,3 @@
-import { Modal } from '@mui/material';
 import React, { useState } from 'react';
 import LabelInput from '../../LabelInput/LabelInput';
 
@@ -19,6 +18,10 @@ const Signup=({isOn,setIsOn} )=>{
                 <LabelInput
                     inputType={"text"}
                     labelText={"Name"}
+                />
+                <LabelInput
+                    inputType={"date"}
+                    labelText={"Birth date"}
                 />
                 <LabelInput
                     inputType={"text"}

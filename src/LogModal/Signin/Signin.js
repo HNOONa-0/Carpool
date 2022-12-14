@@ -1,4 +1,3 @@
-import { Modal } from '@mui/material';
 import React, { useState } from 'react';
 import LabelInput from '../../LabelInput/LabelInput';
 const SignIn=({isOn,setIsOn})=>{

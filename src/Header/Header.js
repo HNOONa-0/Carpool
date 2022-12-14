@@ -9,7 +9,8 @@ const Header=({isMod,setIsMod})=>{
     <header className='header1'>
       <div className='nav1'>
         <div>
-          <AiFillCar size="42px"/>
+          {/* <AiFillCar size="42px"/> */}
+          <h2 className="logo">carpool</h2>
         </div>
         <div className='searchdiv1'>
           <input 
