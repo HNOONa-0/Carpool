@@ -187,3 +187,12 @@ button:focus {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.color-inherit{
+  color: inherit;
+}
+.text-decoration-none{
+  text-decoration: none;
+}
+.gap10{
+  gap:10px
+}

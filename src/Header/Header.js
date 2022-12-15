@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { BsCart,BsCart4 } from 'react-icons/bs';
-import { CgProfile } from 'react-icons/cg';
-import { AiFillCar} from 'react-icons/ai';
+import { BsCart4 } from 'react-icons/bs';
+import { Link } from "react-router-dom";
 import './Header.css'
+import LinkMenu from "./LinkMenu/LinkMenu";
+import Signinup from "./Signinup/Signinup";
 
-const Header=({isMod,setIsMod})=>{
+const Header=({isLogin,setIsLogin,isMod,setIsMod})=>{
    return(
     <header className='header1'>
       <div className='nav1'>
+
         <div>
-          {/* <AiFillCar size="42px"/> */}
-          <h2 className="logo">carpool</h2>
+          <Link to='/' className="logo text-decoration-none color-inherit">
+            <h3>carpool</h3>
+          </Link>
         </div>
+
         <div className='searchdiv1'>
           <input 
             className='search1'
@@ -20,18 +24,23 @@ const Header=({isMod,setIsMod})=>{
             placeholder='What are you looking for?'>
           </input>
         </div>
+
         <div className='signcart1'> 
-            <button className='sign1' onClick={()=>{
-              // console.log("sign in clicked")
-              setIsMod(!isMod)
-            }}>
-                <h1>Sign in</h1>
-                <CgProfile size="18px"/>
-            </button>
-            <button className='sign1' onClick={()=>console.log("cart clicked")}>
-                <h1 >Cart</h1>
-                <BsCart4 size="18px"/>
-            </button>
+            <Signinup
+              isMod={isMod}
+              setIsMod={setIsMod}
+              isLogin={isLogin}
+            />
+            <LinkMenu
+              isLogin={isLogin}
+              setIsLogin={setIsLogin}
+            />
+            <div>
+              <Link to='/cart' className="sign1 text-decoration-none color-inherit">
+                  <h3>Cart</h3>
+                  <BsCart4 size="18px"/>
+              </Link>
+            </div>
           </div>
         </div>
       </header>

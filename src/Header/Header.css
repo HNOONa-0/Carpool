@@ -44,6 +44,7 @@
   align-items: center;
   gap: 10px;
 }
+
 .sign1:hover{
   /* color:#595A5B; */
   color:#76B7F9;
@@ -53,4 +54,8 @@
   background-color: transparent;
   text-transform: uppercase;
   cursor: pointer;
+}
+.Link{
+  text-decoration: none;
+  color:inherit;
 }
