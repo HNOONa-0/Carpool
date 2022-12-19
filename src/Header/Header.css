@@ -1,6 +1,6 @@
 .header1{
     /* background-color: #A9CCE3 ; */
-    background-color: rgb(56, 102, 223);
+    background-color: rgb(144, 185, 142);
 }
 .nav1{
   display: flex;
@@ -58,4 +58,17 @@
 .Link{
   text-decoration: none;
   color:inherit;
+}
+@media (min-width:320px) and (max-width:480px){
+  .logo{
+
+  }
+}
+@media (min-width:481px) and (max-width:768px){
+   
+    
+}
+
+@media (min-width:769px) and (max-width:1024px){
+        
 }

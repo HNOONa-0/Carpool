@@ -8,7 +8,7 @@ import Cart from './Pages/Cart';
 import Home from './Pages/Home';
 function App() {
   const [isMod,setIsMod]=useState(false);
-  const [isLogin,setIsLogin]=useState(true);
+  const [isLogin,setIsLogin]=useState(false);
   
   return (
     <>
