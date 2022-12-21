@@ -25,7 +25,7 @@ const Header=({isLogin,setIsLogin,isMod,setIsMod})=>{
           </input>
         </div>
 
-        <div className='signcart1'> 
+        <div className='signcart1 overflow-hidden'> 
             <Signinup
               isMod={isMod}
               setIsMod={setIsMod}

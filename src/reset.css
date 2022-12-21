@@ -196,3 +196,6 @@ button:focus {
 .gap10{
   gap:10px
 }
+.overflow-hidden{
+  white-space: nowrap;
+}
