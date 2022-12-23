@@ -36,7 +36,7 @@ const LinkMenu=({isLogin,setIsLogin})=>{
             >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>Orders</MenuItem>
-                <MenuItem onClick={handleClose}>Cards</MenuItem>
+                <MenuItem onClick={handleClose}>Admin page</MenuItem>
                 <MenuItem onClick={(e)=>{
                     setIsLogin(!isLogin)
                     handleClose(e)
