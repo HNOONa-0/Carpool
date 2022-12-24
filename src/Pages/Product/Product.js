@@ -1,36 +1,30 @@
 import { List } from "@mui/material";
 import React, { useState } from "react";
-import { dataList, ratingList, END_PRICE, START_PRICE, supportedBrand } from "./Data";
 import FilterPanel from "./FilterPanel";
 import ProductList from "./ProductList";
-const initBrand=()=>{
-    let arr=[];
-    for(let i=0;i<supportedBrand.length;i++) arr.push({id:i,checked:false,label:supportedBrand[i] } );
-    return arr;
+const curatedList=({brand,selectedPrice,selectedRating},searchText)=>{
+    return [];
 }
-const Product=()=>{
+const Product=({filterData,setFilterData,searchText} )=>{
 // filters    
-    const [selectedRating, setSelectedRating] = useState(1);
-    const [selectedPrice, setSelectedPrice] = useState([START_PRICE,END_PRICE]);
-    const [brand,setBrand]=useState(initBrand() );
-// data displayed  
-    const [list, setList] = useState(dataList);
-    const [resultsFound, setResultsFound] = useState(true);
-  
+    const {selectedRating,selectedPrice,brand}= filterData;
+    
     const handleChangeChecked = (id) => {
-        // console.log("pressing hello")
         const brandStateList = brand;
         const changeCheckedBrand = brandStateList.map((item) =>
             item.id === id ? { ...item, checked: !item.checked } : item
         );
-        setBrand(changeCheckedBrand);
+        // setBrand(changeCheckedBrand);
+        setFilterData({...filterData,brand:changeCheckedBrand})
     };
     const handleChangePrice = (event, value) => {
-        // console.log(value);
-        setSelectedPrice(value);
+        // setSelectedPrice(value);
+        setFilterData({...filterData,selectedPrice:value} )
     };
-  
-
+    const setSelectedRating=(id)=>{
+        setFilterData({...filterData,selectedRating:id} )
+    }
+    const list=curatedList(filterData,searchText)
     return(
         <div className="product rest-height flex flex-col">
             <div className="product-panel-list-wrap flex flex1 overflow-y-auto">

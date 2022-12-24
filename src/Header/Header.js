@@ -12,8 +12,8 @@ const Header=({isLogin,setIsLogin,isMod,setIsMod,searchText,setSearchText})=>{
       <div className='nav1'>
       
         <div>
-          <Link to='/'>
-          {/* <Link to='/' className="logo text-decoration-none color-inherit"> */}
+          {/* <Link to='/'> */}
+          <Link to='/' className="logo text-decoration-none color-inherit">
             {/* Carpool */}
             <MdCarRental size='32px'/>
           </Link>

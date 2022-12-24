@@ -1,10 +1,12 @@
 import { CgProfile } from 'react-icons/cg';
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
 import React, { useState } from "react";
-import { Menu, MenuList,MenuItem } from '@mui/material';
+import { Menu, MenuList,MenuItem, Divider } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const LinkMenu=({isLogin,setIsLogin})=>{
     if(!isLogin)return null
+
     const[anchorEl,setAnchorEl]=useState(null)
     const open=Boolean(anchorEl)
     const handleClick=(e) =>{
@@ -34,9 +36,22 @@ const LinkMenu=({isLogin,setIsLogin})=>{
                 }}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>Orders</MenuItem>
-                <MenuItem onClick={handleClose}>Admin page</MenuItem>
+                <MenuItem onClick={handleClose}
+                    component={Link} to="/profile"
+                >
+                    Profile
+                </MenuItem>
+                <MenuItem onClick={handleClose}
+                    component={Link} to="/admin"
+                >
+                    Admin
+                </MenuItem>
+                <MenuItem onClick={handleClose}
+                    component={Link} to="/order"
+                >
+                    Orders
+                </MenuItem>
+                <Divider/>
                 <MenuItem onClick={(e)=>{
                     setIsLogin(!isLogin)
                     handleClose(e)

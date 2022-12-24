@@ -4,11 +4,10 @@ import View from '../Components/view'
 import Box from '../Components/box'
 const Home=()=>{
     return(
-        <>
-        <View/>
-       <Card/>
-       
-       </>
+        <div className="overflow-y-auto">
+            <View/>
+            <Card/>
+        </div>
 
     )
 }
