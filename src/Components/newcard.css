@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+*{  
+    font-family: 'Source Sans Pro', sans-serif;
+   
+}
+  /*
+  Dom part
+  */
+  .ranCarPage {
+    display: inline-block;
+    position: relative; 
+    width: 100%;
+    margin-top: 3%;
+    border-radius: 20px;
+    background-color: rgb(144, 185, 142);
+  }
+  
+  .ranCarImage {
+    margin-top: 0%;
+    display: inline-block;
+    width: 22%;
+  }
+  
+  .ranCarImage img {
+    margin-top: 0%;
+    width: 100%;
+  }
+  
+  .ranCarDetails {
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 0px;
+    width: 40%;
+    height: 100px;
+    vertical-align: top;
+    margin-bottom: 0%;
+    height: 30%;
+    color: rgb(0, 0, 0);
+  }
+  .shadow {
+    width: 100%;
+    background-color: #ffffff;
+    color: #1f1f1f;
+    opacity: 0.3;
+  }
+  
+  .ranCarDetails h4 {
+    margin: 5% 0 -16px 0;
+  }
+  
+  .ranCarPrice {
+    display: inline-block;
+    width: 25%;
+    margin-left: 7%;
+    margin-top: 2%;
+  }
+  
+  .ranBookNow {
+    width: 100%;
+    text-align: top;
+    height: 60px;
+    border-radius: 8%;
+    color: rgb(0, 0, 0);
+    padding: 1%;
+  }
+  
+  .ranBookNow button {
+    width: 65%;
+    margin-top: 32%;
+    position: relative;
+    top: -69%;
+    left: -9%;
+    border-radius: 5px;
+    padding: 1%;
+  }
+  
+  .ranBookNow button:hover {
+    background-color: #575757;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    padding: 2%;
+  }
+  
+
