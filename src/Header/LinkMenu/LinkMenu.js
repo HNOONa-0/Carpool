@@ -51,6 +51,11 @@ const LinkMenu=({isLogin,setIsLogin})=>{
                 >
                     Orders
                 </MenuItem>
+                <MenuItem onClick={handleClose}
+                    component={Link} to="/product"
+                >
+                    Products
+                </MenuItem>
                 <Divider/>
                 <MenuItem onClick={(e)=>{
                     setIsLogin(!isLogin)

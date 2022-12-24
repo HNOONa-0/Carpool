@@ -10,6 +10,7 @@ import TempCart from './TempCart/TempCart';
 import Product from './Pages/Product/Product';
 import Profile from './Pages/Profile';
 import { END_PRICE, START_PRICE, supportedBrand } from './Data/Data';
+import ProductWithId from './Pages/ProductWithId';
 
 const initBrand=()=>{
   let arr=[];
@@ -21,6 +22,7 @@ function App() {
   const [isLogin,setIsLogin]=useState(true);
   const [isTempCart,setIsTempCart]=useState(false);
 
+  const[productId,setProductId]=useState('');
   const[searchText,setSearchText]=useState('');
   const[filterData,setFilterData]=useState({
     brand:initBrand(),
@@ -54,13 +56,15 @@ function App() {
           <Route path='/cart' element={<Cart
             userData={userData}
           />} />
+          <Route path='/profile' element={<Profile 
+            userData={userData}
+          />} />
           <Route path='/product' element={<Product
             filterData={filterData}
             setFilterData={setFilterData}
             searchText={searchText}
           />} />
-          <Route path='/profile' element={<Profile 
-            userData={userData}
+          <Route path={'/product/:productId'} element={<ProductWithId
           />} />
         </Routes>
     </>

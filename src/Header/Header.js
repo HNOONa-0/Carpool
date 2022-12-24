@@ -7,6 +7,8 @@ import Signinup from "./Signinup/Signinup";
 import {MdCarRental} from 'react-icons/md';
 
 const Header=({isLogin,setIsLogin,isMod,setIsMod,searchText,setSearchText})=>{
+  // hide products if i logged in
+  const style={display:isLogin?"none":"flex" };
    return(
     <header className='header1'>
       <div className='nav1'>
@@ -42,7 +44,7 @@ const Header=({isLogin,setIsLogin,isMod,setIsMod,searchText,setSearchText})=>{
               setIsLogin={setIsLogin}
             />
             <div>
-              <Link to='/product' className="sign1 text-decoration-none color-inherit">
+              <Link to='/product' className="sign1 text-decoration-none color-inherit" style={style}>
                   <h3>Products</h3>
               </Link>
             </div>
