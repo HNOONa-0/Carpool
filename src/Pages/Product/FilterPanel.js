@@ -8,7 +8,7 @@ const FilterPanel=({brand,changeChecked,selectedPrice,changePrice,selectedRating
     for(let i=selectedRating-1;i<ratingList.length;i++) value.push(ratingList[i].value)
     return(
         <div className="product-panel-wrap flex-basis-280 overflow-y-auto p16">
-            <div className="mb16"  style={{backgroundColor:'red'}}>                
+            <div className="mb16"  style={{backgroundColor:'rgb(144, 185, 142)' ,  borderRadius:'20px' }}>                
                 <Box sx={{ display: 'flex',width:'100%'} }>
                     <FormControl sx={{ m: 3,width:'100%'} } component="fieldset" variant="standard">
                         <FormLabel component="legend" sx={{fontWeight:'bold',fontSize:'18px'}}>Brand</FormLabel>
@@ -20,7 +20,7 @@ const FilterPanel=({brand,changeChecked,selectedPrice,changePrice,selectedRating
                     </FormControl>
                 </Box>
             </div>
-            <div className="mb16" style={{backgroundColor:'red'}}>                
+            <div className="mb16" style={{backgroundColor:'rgb(144, 185, 142)' ,  borderRadius:'20px' }}>                
                 <div className="p16" style={{paddingLeft:'16px',paddingBottom:'16px'}}>
                     <p className="fz18 bold">Price</p>
                 </div>
@@ -34,7 +34,7 @@ const FilterPanel=({brand,changeChecked,selectedPrice,changePrice,selectedRating
                     />
                 </div>
             </div>
-            <div className="mb16" style={{backgroundColor:'red'}}>
+            <div className="mb16" style={{backgroundColor:'rgb(144, 185, 142)' ,  borderRadius:'20px' }}>
                 <div className="p16" style={{paddingLeft:'16px',paddingBottom:'16px'}}>
                     <p className="fz18 bold">Star rating</p>
                 </div>

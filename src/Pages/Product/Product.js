@@ -12,7 +12,7 @@ const Product=()=>{
 // filters    
     const [selectedRating, setSelectedRating] = useState(1);
     const [selectedPrice, setSelectedPrice] = useState([START_PRICE,END_PRICE]);
-    const [brand,setBrand]=useState(initBrand() );
+    const [brand,setBrand]=useState(initBrand());
 // data displayed  
     const [list, setList] = useState(dataList);
     const [resultsFound, setResultsFound] = useState(true);
