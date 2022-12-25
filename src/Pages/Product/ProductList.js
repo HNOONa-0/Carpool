@@ -1,14 +1,11 @@
 import React from "react";
 import Newcard from '../../Components/newcard'
-const ProductList=()=>{
+const ProductList=({setTempCartProduct})=>{
     return(
         <div className="product-list-wrap flex1 overflow-y-auto p16">
-          <Newcard/>
-          <Newcard/>
-          <Newcard/>
-          <Newcard/>
-          <Newcard/>
-          <Newcard/>
+          <Newcard
+            setTempCartProduct={setTempCartProduct}
+          />
         </div>
     )
 }

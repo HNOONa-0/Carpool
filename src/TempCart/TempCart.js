@@ -3,13 +3,14 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { AiFillCheckCircle } from "react-icons/ai";
 import myimg from '../images/207.png'
-const TempCart=({isTempCart,setIsTempCart})=>{
-    if(!isTempCart) return null;
+const TempCart=({cartData,setCartData,tempCartProduct,setTempCartProduct})=>{
+    if(!tempCartProduct) return null;
+    const {carImg,name,model,brand,fule,price,rating}=tempCartProduct;
     return(
         <Drawer 
             anchor="right" 
-            open={isTempCart}
-            onClose={(e)=>setIsTempCart(false) }
+            open={tempCartProduct!==null}
+            onClose={(e)=>setTempCartProduct(null) }
         >
             <div>
                 <div className="flex p10" style={{maxWidth:'360px'}}>

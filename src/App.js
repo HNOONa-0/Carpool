@@ -9,6 +9,7 @@ import Home from './Pages/Home';
 import TempCart from './TempCart/TempCart';
 import Product from './Pages/Product/Product';
 import Profile from './Pages/Profile';
+import Checkout from './Pages/Checkout';
 import { END_PRICE, START_PRICE, supportedBrand } from './Data/Data';
 import ProductWithId from './Pages/ProductWithId';
 
@@ -22,7 +23,9 @@ function App() {
   const [isLogin,setIsLogin]=useState(true);
   const [isTempCart,setIsTempCart]=useState(false);
 
-  const[productId,setProductId]=useState('');
+  const[tempCartProduct,setTempCartProduct]=useState(null);
+  const[cartData,setCartData]=useState([]);
+
   const[searchText,setSearchText]=useState('');
   const[filterData,setFilterData]=useState({
     brand:initBrand(),
@@ -47,24 +50,32 @@ function App() {
         setIsMod={setIsMod}
       />
       <TempCart
-        isTempCart={isTempCart}
-        setIsTempCart={setIsTempCart}
-        userData={userData}
+        tempCartProduct={tempCartProduct}
+        setTempCartProduct={setTempCartProduct}
+        cartData={cartData}
+        setCartData={setCartData}
       />
         <Routes>
           <Route path='/' element={<Home/>} />
+
           <Route path='/cart' element={<Cart
+            cartData={cartData}
             userData={userData}
           />} />
           <Route path='/profile' element={<Profile 
+            userData={userData}
+          />} />
+          <Route path='/checkout' element={<Checkout
             userData={userData}
           />} />
           <Route path='/product' element={<Product
             filterData={filterData}
             setFilterData={setFilterData}
             searchText={searchText}
+            setTempCartProduct={setTempCartProduct}
           />} />
           <Route path={'/product/:productId'} element={<ProductWithId
+            setTempCartProduct={setTempCartProduct}
           />} />
         </Routes>
     </>

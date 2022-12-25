@@ -1,9 +1,9 @@
 import './newcard.css'
 import React from 'react'
 import MyImage from '../images/2008.png';
-const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carrating }) => {
+import { Button } from '@mui/material';
+const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carrating,setTempCartProduct }) => {
     return (
-
         <div class="ranCarPage">
             <div class="ranCarImage">
                 <img src={MyImage} alt="{carname}" id="example" />
@@ -28,7 +28,14 @@ const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carra
                     Price: {carprise}
                 </h4>
                 <div class="ranBookNow">
-                    <a><button>BOOK NOW</button> </a>
+                {/* <div> */}
+                    {/* <a><button>BOOK NOW</button> </a> */}
+                    <Button variant="contained" 
+                    sx={{marginBottom:"20px"}}
+                    onClick={e=>{
+                        // send temp cart product
+                        setTempCartProduct({});
+                    }}>Add to cart</Button>
                 </div>
             </div>
         </div>

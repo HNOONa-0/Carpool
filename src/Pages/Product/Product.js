@@ -5,7 +5,7 @@ import ProductList from "./ProductList";
 const curatedList=({brand,selectedPrice,selectedRating},searchText)=>{
     return [];
 }
-const Product=({filterData,setFilterData,searchText} )=>{
+const Product=({filterData,setFilterData,searchText,setTempCartProduct} )=>{
 // filters    
     const {selectedRating,selectedPrice,brand}= filterData;
     
@@ -36,7 +36,9 @@ const Product=({filterData,setFilterData,searchText} )=>{
                     selectedRating={selectedRating}
                     setSelectedRating={setSelectedRating}
                 />
-                <ProductList/>
+                <ProductList
+                    setTempCartProduct={setTempCartProduct}
+                />
             </div>
         </div>
     )
