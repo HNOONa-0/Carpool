@@ -34,7 +34,8 @@ const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carra
                 {/* <div> */}
                     {/* <a><button>BOOK NOW</button> </a> */}
                     <Button variant="contained" 
-                    sx={{marginBottom:"20px"}}
+                    size='small'
+                    sx={{marginBottom:"20px"}} 
                     onClick={e=>{
                         // send temp cart product
                         setTempCartProduct({});
