@@ -1,13 +1,13 @@
 .header1{
     /* background-color: #A9CCE3 ; */
-    background-color: rgb(144, 185, 142);
+    background-color: #1976d2;
 }
 .nav1{
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-
+color: black;
   margin-left: 3rem;
   margin-right: 3rem;
   padding-top: 16px;

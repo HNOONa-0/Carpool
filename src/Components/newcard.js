@@ -2,7 +2,7 @@ import './newcard.css'
 import React from 'react'
 import MyImage from '../images/2008.png';
 import { Button } from '@mui/material';
-const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carrating,setTempCartProduct }) => {
+const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carrating,setTempCartProduct,stock }) => {
     return (
         <div class="ranCarPage">
             <div class="ranCarImage">
@@ -19,6 +19,9 @@ const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carra
                     FuleType: {carfuletype}
                 </h4>
                 <h4>
+                    Qu: {stock}
+                </h4>
+                <h4>
                     Rate: {carrating}⭐
                 </h4>
             </div>
@@ -31,7 +34,8 @@ const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carra
                 {/* <div> */}
                     {/* <a><button>BOOK NOW</button> </a> */}
                     <Button variant="contained" 
-                    sx={{marginBottom:"20px"}}
+                    size='small'
+                    sx={{marginBottom:"20px"}} 
                     onClick={e=>{
                         // send temp cart product
                         setTempCartProduct({});
