@@ -36,7 +36,6 @@ function App() {
     selectedRating:1
   })
   const[userData,setUserData]=useState(null)
-  const [imgIdx,setImgIdx]=useState(0);
 
   return (
     <>

@@ -27,8 +27,8 @@ const Product=({filterData,setFilterData,searchText,setTempCartProduct} )=>{
     }
     const list=curatedList(filterData,searchText)
     return(
-        <div className="product rest-height flex flex-col">
-            <div className="product-panel-list-wrap flex flex1 overflow-y-auto">
+        <div className="product rest-height flex flex-col" >
+            <div className="product-panel-list-wrap flex flex1 overflow-y-auto" >
                 <FilterPanel
                     brand={brand}
                     changeChecked={handleChangeChecked}

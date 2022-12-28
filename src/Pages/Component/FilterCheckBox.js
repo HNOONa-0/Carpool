@@ -6,7 +6,7 @@ import CheckboxProton from "./CheckboxProton";
 
 const FilterCheckBox=({brand,changeChecked})=>{
     return(
-        <div className="mb16"  style={{backgroundColor:'red'}}>                
+        <div className="mb16" >                
             <Box sx={{ display: 'flex',width:'100%'} }>
                 <FormControl sx={{ m: 3,width:'100%'} } component="fieldset" variant="standard">
                     <FormLabel component="legend" sx={{fontWeight:'bold',fontSize:'18px'}}>Brand</FormLabel>

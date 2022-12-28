@@ -5,7 +5,7 @@ const FilterRatingStar=({selectedRating,setSelectedRating})=>{
     const value=[];
     for(let i=selectedRating-1;i<ratingList.length;i++) value.push(ratingList[i].value);
     return(
-        <div className="mb16" style={{backgroundColor:'red'}}>
+        <div className="mb16">
             <div className="p16" style={{paddingLeft:'16px',paddingBottom:'16px'}}>
                 <p className="fz18 bold">Star rating</p>
             </div>

@@ -2,7 +2,7 @@ import './newcard.css'
 import React from 'react'
 import MyImage from '../images/2008.png';
 import { Button } from '@mui/material';
-const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carrating,setTempCartProduct,stock }) => {
+const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carrating,setTempCartProduct,stock,inCart}) => {
     return (
         <div class="ranCarPage">
             <div class="ranCarImage">
@@ -19,7 +19,7 @@ const newcard = ({ carname, carprise, carfuletype, carimages, carlocation, carra
                     FuleType: {carfuletype}
                 </h4>
                 <h4>
-                    Qu: {stock}
+                    Quantity: {stock}
                 </h4>
                 <h4>
                     Rate: {carrating}⭐

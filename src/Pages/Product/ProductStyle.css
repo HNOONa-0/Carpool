@@ -3,9 +3,7 @@
     flex-basis: 0px;
     min-width: 180px;
     max-width: 280px;
-    background: coral;
 }
 .second-to-shrink {
     flex-grow: 4;
-    background: cornflowerblue;
 }

@@ -5,7 +5,7 @@ import FilterSlider from "../Component/FilterSlider";
 import './ProductStyle.css'
 const FilterPanel=({brand,changeChecked,selectedPrice,changePrice,selectedRating,setSelectedRating} )=>{
     return(
-        <div className="product-panel-wrap flex-basis-280 overflow-y-auto p16 first-to-shrink">
+        <div className="product-panel-wrap flex-basis-280 overflow-y-auto p16 first-to-shrink" style={{backgroundColor:'#DCDEE2'}}>
             <FilterCheckBox
                 brand={brand}
                 changeChecked={changeChecked}
