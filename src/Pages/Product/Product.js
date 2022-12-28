@@ -2,6 +2,7 @@ import { List } from "@mui/material";
 import React, { useState } from "react";
 import FilterPanel from "./FilterPanel";
 import ProductList from "./ProductList";
+import './ProductStyle.css'
 const curatedList=({brand,selectedPrice,selectedRating},searchText)=>{
     return [];
 }

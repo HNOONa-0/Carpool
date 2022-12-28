@@ -12,6 +12,9 @@ import Profile from './Pages/Profile';
 import Checkout from './Pages/Checkout';
 import { END_PRICE, START_PRICE, supportedBrand } from './Data/Data';
 import ProductWithId from './Pages/ProductWithId';
+import Order from './Pages/Order';
+import CartCard from './Components/CartCard';
+import ImageSlider from './Components/ImageSlider';
 
 const initBrand=()=>{
   let arr=[];
@@ -33,6 +36,8 @@ function App() {
     selectedRating:1
   })
   const[userData,setUserData]=useState(null)
+  const [imgIdx,setImgIdx]=useState(0);
+
   return (
     <>
       <Header
@@ -55,6 +60,7 @@ function App() {
         cartData={cartData}
         setCartData={setCartData}
       />
+      {/* <ImageSlider setImgIdx={setImgIdx} imgIdx={imgIdx}/> */}
         <Routes>
           <Route path='/' element={<Home/>} />
 
@@ -67,6 +73,16 @@ function App() {
           />} />
           <Route path='/checkout' element={<Checkout
             userData={userData}
+            cartData={cartData}
+            isLogin={isLogin}
+          />} />
+          <Route path={'/order'} element={<Order
+            userData={userData}
+          />} />
+
+          <Route path={'/order/:orderId'} element={<CartCard
+            userData={userData}
+            isOrder={true}
           />} />
           <Route path='/product' element={<Product
             filterData={filterData}

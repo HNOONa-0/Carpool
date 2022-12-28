@@ -5,10 +5,12 @@ import './Header.css'
 import LinkMenu from "./LinkMenu/LinkMenu";
 import Signinup from "./Signinup/Signinup";
 import {MdCarRental} from 'react-icons/md';
+import {RxHamburgerMenu } from 'react-icons/rx';
 
 const Header=({isLogin,setIsLogin,isMod,setIsMod,searchText,setSearchText})=>{
   // hide products if i logged in
   const style={display:isLogin?"none":"flex" };
+  
    return(
     <header className='header1'>
       <div className='nav1'>

@@ -10,11 +10,12 @@ const FilterRatingStar=({selectedRating,setSelectedRating})=>{
                 <p className="fz18 bold">Star rating</p>
             </div>
             <ToggleButtonGroup
+                sx={{display:'flex',justifyContent:'space-between',fontSize:'14px'}}
                 value={value}
             >
                 {ratingList.map(en=>
                 <ToggleButton 
-                    sx={{display:'flex'}}
+                    sx={{width:'30px',height:'40px'}}
                     key={en.id}
                     value={en.value}
                     onClick={e=>{
