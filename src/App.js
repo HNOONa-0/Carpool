@@ -15,7 +15,7 @@ import ProductWithId from './Pages/ProductWithId';
 import Order from './Pages/Order';
 import CartCard from './Components/CartCard';
 import axios from 'axios';
-import { getListUsers } from './Api/userApi';
+import Admin from './Pages/Admin';
 
 const initBrand=()=>{
   let arr=[];
@@ -38,21 +38,21 @@ function App() {
   })
   const[userData,setUserData]=useState(null)
   useEffect(()=>{
-    const run=async()=>{
-      getListUsers.then(function (response) {
-        // handle success
-        const {data}=response
-        console.log(data);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .then(function () {
-        // always executed
-      });
-    }
-    run();
+    // const run=async()=>{
+    //   getListUsers.then(function (response) {
+    //     // handle success
+    //     const {data}=response
+    //     console.log(data);
+    //   })
+    //   .catch(function (error) {
+    //     // handle error
+    //     console.log(error);
+    //   })
+    //   .then(function () {
+    //     // always executed
+    //   });
+    // }
+    // run();
   })
   return (
     <>
@@ -116,7 +116,8 @@ function App() {
           <Route path={'/order'} element={<Order
             userData={userData}
           />} />
-
+          <Route path={'/admin'} element={<Admin
+          />} />
           <Route path={'/order/:orderId'} element={<CartCard
             userData={userData}
             isOrder={true}
