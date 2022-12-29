@@ -4,11 +4,9 @@ import { Button, Divider, Popover, Typography } from "@mui/material";
 import SmallCard from "../Components/SmallCard";
 import CartCard from "../Components/CartCard";
 const Checkout=({cartData,isLogin})=>{
-    // map each in cart to typographycar to info
-    // mode of buttton add,remove,none
-    
+    // take 
     return(
-        <CartCard isLogin={isLogin} />
+        <CartCard isLogin={isLogin} cartData={cartData}/>
     )
 }
 export default Checkout;

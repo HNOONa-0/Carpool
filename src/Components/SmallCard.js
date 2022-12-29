@@ -5,9 +5,14 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import myimg from '../images/207.png'
 
-const SmallCard=({product,isCart,setTempCartProduct})=>{
+const computeSum=(arr)=>{
+    let sum=0;
+    for(let i=0;i<arr.length;i++)sum+=arr[i].quantity*arr[i].price;
+    return sum;
+}
+const SmallCard=({cartData,setCartData,tempCartProduct,setTempCartProduct,isCart})=>{
     const style={justifyContent:isCart?"space-between":"normal"};
-    const {carImg,name,model,brand,fule,price,rating}=product;
+    const {carImg,name,model,brand,fule,price,rating}=tempCartProduct;
     return(
         <div>
             <div className="flex p10" style={{maxWidth:'360px'}}>
@@ -57,6 +62,7 @@ const SmallCard=({product,isCart,setTempCartProduct})=>{
             {isCart&&
                 <div className="flex justify-center">
                     <Button variant="contained" component={Link} to="/cart" onClick={e=>{
+                        // add to cart(set cart data) after we close the drawer
                         setTempCartProduct(null)
                     }}>Go to cart</Button>
                 </div>

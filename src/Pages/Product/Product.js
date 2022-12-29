@@ -1,10 +1,20 @@
-import { List } from "@mui/material";
+qimport { List } from "@mui/material";
 import React, { useState } from "react";
 import FilterPanel from "./FilterPanel";
 import ProductList from "./ProductList";
 import './ProductStyle.css'
 const curatedList=({brand,selectedPrice,selectedRating},searchText)=>{
-    return [];
+    // get all products from an api call
+    let allProduct=[];
+    let arr=[];
+
+    for(let i=0;i<allProduct.length;i++){
+        let ok=1;
+        for(let j=0;j<brand.length;j++)if(brand[j].checked===false&&allProduct[i].brand===brand[j].value)ok=0;
+        if(ok&&allProduct[i].rating>=selectedRating&&(searchText===""||allProduct[i].name.includes(searchText) )&&
+        allProduct[i].price>=selectedPrice[0]&&allProduct[i].price<=selectedPrice[1]) arr.push(allProduct[i] );
+    }
+    return arr;
 }
 const Product=({filterData,setFilterData,searchText,setTempCartProduct} )=>{
 // filters    

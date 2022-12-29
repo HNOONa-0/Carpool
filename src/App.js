@@ -14,7 +14,8 @@ import { END_PRICE, START_PRICE, supportedBrand } from './Data/Data';
 import ProductWithId from './Pages/ProductWithId';
 import Order from './Pages/Order';
 import CartCard from './Components/CartCard';
-import ImageSlider from './Components/ImageSlider';
+import axios from 'axios';
+import { getListUsers } from './Api/userApi';
 
 const initBrand=()=>{
   let arr=[];
@@ -36,32 +37,66 @@ function App() {
     selectedRating:1
   })
   const[userData,setUserData]=useState(null)
-
+  useEffect(()=>{
+    const run=async()=>{
+      getListUsers.then(function (response) {
+        // handle success
+        const {data}=response
+        console.log(data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+    }
+    run();
+  })
   return (
     <>
       <Header
+      // login logic
         isLogin={isLogin}
         setIsLogin={setIsLogin}
+      // modal logic
         isMod={isMod}
         setIsMod={setIsMod}
+      // search text
         searchText={searchText}
         setSearchText={setSearchText}
+      // all user data
         userData={userData}
         setUserData={setUserData}
       />
       <LogModal
+      // user click on sign in
         isMod={isMod}
         setIsMod={setIsMod}
+        // incase a new user sign up, log him in and get his data
+        // so set login to true, set user data aswell
+        setIsLogin={setIsLogin}
+        setUserData={setUserData} 
+        // set cart data aswell,reassign it
+        setCartData={setCartData}
       />
       <TempCart
+      // temp cart product is valid when we click on add to cart
         tempCartProduct={tempCartProduct}
         setTempCartProduct={setTempCartProduct}
+      // need existing cartData to compute sum&add the current product to cart if possible
+      // if possible bec bought amount could exceed stock
         cartData={cartData}
         setCartData={setCartData}
       />
       {/* <ImageSlider setImgIdx={setImgIdx} imgIdx={imgIdx}/> */}
         <Routes>
-          <Route path='/' element={<Home/>} />
+          
+          <Route path='/' element={<Home
+          // give links for products that are displayed on homepage
+          // set is cart to false;
+          />} />
 
           <Route path='/cart' element={<Cart
             cartData={cartData}
@@ -71,6 +106,9 @@ function App() {
             userData={userData}
           />} />
           <Route path='/checkout' element={<Checkout
+          // checkout need user data for credit info
+          // need current products in the cart to compute sum and display them
+          // user needs to be logged in first to checkout
             userData={userData}
             cartData={cartData}
             isLogin={isLogin}

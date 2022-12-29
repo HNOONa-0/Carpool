@@ -2,7 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Box, Container } from "@mui/system";
 import { Button, Divider, Popover, Typography } from "@mui/material";
 import SmallCard from "./SmallCard";
-
+const computeSum=(arr)=>{
+    let sum=0;
+    for(let i=0;i<arr.length;i++)sum+=arr[i].quantity*arr[i].price;
+    return sum;
+}
 const CartCard=({cartData,isLogin,isOrder})=>{
     const buttonRef=useRef();
     const[anchorEl,setAnchorEl]=useState(null)

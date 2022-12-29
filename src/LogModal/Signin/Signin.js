@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import LabelInput from '../../LabelInput/LabelInput';
 
@@ -5,7 +6,7 @@ const signinInputType=["text","password"];
 const signinName=["email","password"];
 
 
-const SignIn=({isOn,setIsOn})=>{
+const SignIn=({isOn,setIsOn,setIsMod,setIsLogin,setUserData,setCartData})=>{
     if(isOn)return null;
     const[data,setData]=useState({
         email:'',
@@ -13,6 +14,29 @@ const SignIn=({isOn,setIsOn})=>{
     })
     const handleChange=e=>{
         setData({...data, [e.target.name]: e.target.value} );
+    }
+    const handleOnSubmit=(e)=>{
+        const {email,password}=data
+        axios.post('url whatever its',{
+            email,password
+        }).then(function (response) {
+            // const {data}=response
+            // console.log(data);
+            // on succes,set user data,set cart data, set is login true,set is on to false,set is mod to false;
+            setUserData([]);
+            setCartData([]);
+            setIsLogin(true);
+            setIsOn(false);
+            setIsMod(false);
+          })
+          .catch(function (error) {
+            // handle error
+            // on failure, cant set data, cant set login, cant set ison, cant set ismod
+            // just display error message;
+          })
+          .then(function () {
+            // always executed
+          });
     }
     return(
         <div className='midxy modsz modsy border-curve pt64'>
@@ -37,7 +61,7 @@ const SignIn=({isOn,setIsOn})=>{
                 </div>
             </div>
                 <div className='signin-button-div'>
-                    <button className='signin-button'>SIGN IN</button>
+                    <button className='signin-button' onClick={handleOnSubmit}>SIGN IN</button>
                 </div>
             </div>
     )
