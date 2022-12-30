@@ -3,7 +3,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import Header from './Header/Header';
 import LogModal from './LogModal/LogModal';
-import { Route, Routes } from 'react-router-dom';
+import { HashRouter as Router,Route, Routes,Switch } from 'react-router-dom';
 import Cart from './Pages/Cart';
 import Home from './Pages/Home';
 import TempCart from './TempCart/TempCart';
@@ -91,7 +91,53 @@ function App() {
         setCartData={setCartData}
       />
       {/* <ImageSlider setImgIdx={setImgIdx} imgIdx={imgIdx}/> */}
-        <Routes>
+      <Routes>
+      <Route path='/' element={<Home
+          // give links for products that are displayed on homepage
+          // set is cart to false;
+          />} />
+
+          <Route path='/cart' element={<Cart
+            cartData={cartData}
+            userData={userData}
+          />} />
+          <Route path='/profile' element={<Profile 
+            userData={userData}
+          />} />
+          <Route path='/checkout' element={<Checkout
+          // checkout need user data for credit info
+          // need current products in the cart to compute sum and display them
+          // user needs to be logged in first to checkout
+            userData={userData}
+            cartData={cartData}
+            isLogin={isLogin}
+          />} />
+          <Route path={'/order'} element={<Order
+            userData={userData}
+          />} />
+          <Route path={'/admin'} element={<Admin
+          />} />
+          <Route path={'/order/:orderId'} element={<CartCard
+            userData={userData}
+            isOrder={true}
+          />} />
+          <Route path='/product' element={<Product
+            filterData={filterData}
+            setFilterData={setFilterData}
+            searchText={searchText}
+            setTempCartProduct={setTempCartProduct}
+          />} />
+          <Route path={'/product/:productId'} element={<ProductWithId
+            setTempCartProduct={setTempCartProduct}
+          />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;
+
+{/* <Routes>
           
           <Route path='/' element={<Home
           // give links for products that are displayed on homepage
@@ -131,10 +177,4 @@ function App() {
           <Route path={'/product/:productId'} element={<ProductWithId
             setTempCartProduct={setTempCartProduct}
           />} />
-        </Routes>
-    </>
-  );
-}
-
-export default App;
-
+        </Routes> */}
