@@ -12,7 +12,7 @@ const ProductWithId=({setTempCartProduct})=>{
         // validate product
     },[])
     console.log(productId)
-    const {carImg,name,model,brand,fule,price,rating,quantity}=productData;
+    // const {carImg,name,model,brand,fule,price,rating,quantity}=productData;
     const arr=["name","model","brand","fule","price","rating","quantity"];
     return(
         <Container maxWidth="sm" sx={{display:'flex',justifyContent:'center'} }>
@@ -34,7 +34,7 @@ const ProductWithId=({setTempCartProduct})=>{
                         <Button variant="contained"
                             onClick={e=>{
                                 // set temp cart data to show temp cart
-                                setTempCartProduct({});
+                                // setTempCartProduct({});
                             }}
                         >Add to cart</Button>
                     </CardActions>

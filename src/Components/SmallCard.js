@@ -63,7 +63,7 @@ const SmallCard=({cartData,setCartData,tempCartProduct,setTempCartProduct,isCart
                 <div className="flex justify-center">
                     <Button variant="contained" component={Link} to="/cart" onClick={e=>{
                         // add to cart(set cart data) after we close the drawer
-                        setTempCartProduct(null)
+                        // setTempCartProduct(null)
                     }}>Go to cart</Button>
                 </div>
             }

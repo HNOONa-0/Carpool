@@ -21,26 +21,7 @@ const Signup=({isOn,setIsOn,setIsLogin,setUserData,setCartData,setIsMod} )=>{
     const handleOnSubmit=(e)=>{
         // register user if succesful log him in, else promp an error message saying
         const {email,password,name,birthdate,phone}=data
-        axios.post('url whatever its',{
-            email,password,name,birthdate,phone
-        }).then(function (response) {
-            // const {data}=response
-            // console.log(data);
-            // on succes,set user data,set cart data, set is login true,set is on to false,set is mod to false;
-            setUserData([]);
-            setCartData([]);
-            setIsLogin(true);
-            setIsOn(false);
-            setIsMod(false);
-          })
-          .catch(function (error) {
-            // handle error
-            // on failure, cant set data, cant set login, cant set ison, cant set ismod
-            // just display error message;
-          })
-          .then(function () {
-            // always executed
-          });
+        
     }
     return(
         <div className='midxy modsz modsy border-curve pt64'>
